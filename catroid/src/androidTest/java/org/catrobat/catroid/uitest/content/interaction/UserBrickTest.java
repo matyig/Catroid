@@ -97,14 +97,14 @@ public class UserBrickTest extends BaseActivityInstrumentationTestCase<MainMenuA
 
 	public void testCopyAndDeleteBricksInUserScriptIncludingDefinitionBrick() {
 		UiTestUtils.showSourceAndEditBrick(UiTestUtils.TEST_USER_BRICK_NAME, solo);
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
 		solo.clickOnCheckBox(0);
 		UiTestUtils.acceptAndCloseActionMode(solo);
 		solo.sleep(300);
 		List<Brick> brickList = ProjectManager.getInstance().getCurrentUserBrick().getDefinitionBrick().getUserScript().getBrickList();
 		assertEquals("The selected brick could not be copied!", 2, brickList.size());
 
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
 		solo.clickOnView(solo.getCurrentActivity().findViewById(R.id.select_all));
 		UiTestUtils.acceptAndCloseActionMode(solo);
 		solo.sleep(300);
@@ -368,7 +368,7 @@ public class UserBrickTest extends BaseActivityInstrumentationTestCase<MainMenuA
 
 	public void testCopyAndDeleteUserBrickFromScriptWithBothVariants() {
 		//copy via action mode
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, solo.getCurrentActivity());
 		solo.scrollDown();
 		solo.clickOnCheckBox(7);
 		UiTestUtils.acceptAndCloseActionMode(solo);

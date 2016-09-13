@@ -309,7 +309,7 @@ public class ScriptActivity extends BaseActivity {
 				handleShowDetails(!currentFragment.getShowDetails(), item);
 				break;
 
-			case R.id.copy:
+			/*case R.id.copy:
 				currentFragment.startCopyActionMode();
 				break;
 
@@ -320,7 +320,7 @@ public class ScriptActivity extends BaseActivity {
 				break;
 
 			case R.id.move:
-				break;
+				break;*/
 
 			case R.id.rename:
 				if (currentFragmentPosition != FRAGMENT_SCRIPTS) {

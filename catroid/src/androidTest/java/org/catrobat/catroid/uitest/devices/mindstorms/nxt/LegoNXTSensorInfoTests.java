@@ -78,7 +78,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		boolean nxtDialogDisabledStart = SettingsActivity.getShowLegoMindstormsSensorInfoDialog(applicationContext);
 
 		if (!nxtBricksEnabledStart) {
-			solo.clickOnActionBarItem(R.id.settings);
+			//solo.clickOnActionBarItem(R.id.settings);
 
 			String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 			solo.waitForText(preferenceTitle);
@@ -91,7 +91,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		}
 
 		if (nxtDialogDisabledStart) {
-			solo.clickOnActionBarItem(R.id.settings);
+			//solo.clickOnActionBarItem(R.id.settings);
 
 			String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 			solo.waitForText(preferenceTitle);
@@ -140,7 +140,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		solo.goBack();
 		solo.goBack();
 
-		solo.clickOnActionBarItem(R.id.settings);
+		//solo.clickOnActionBarItem(R.id.settings);
 		String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 		solo.waitForText(preferenceTitle);
 		solo.clickOnText(preferenceTitle);
@@ -188,7 +188,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		solo.goBack();
 		solo.goBack();
 
-		solo.clickOnActionBarItem(R.id.settings);
+		//solo.clickOnActionBarItem(R.id.settings);
 		solo.waitForText(preferenceTitle);
 		solo.clickOnText(preferenceTitle);
 		solo.waitForText(solo.getString(R.string.preference_title_mindstorms_nxt_sensors));
@@ -215,7 +215,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		boolean nxtDialogDisabledStart = SettingsActivity.getShowLegoMindstormsSensorInfoDialog(applicationContext);
 
 		if (!nxtBricksEnabledStart) {
-			solo.clickOnActionBarItem(R.id.settings);
+			//solo.clickOnActionBarItem(R.id.settings);
 
 			String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 			solo.waitForText(preferenceTitle);
@@ -228,7 +228,7 @@ public class LegoNXTSensorInfoTests extends BaseActivityInstrumentationTestCase<
 		}
 
 		if (!nxtDialogDisabledStart) {
-			solo.clickOnActionBarItem(R.id.settings);
+			//solo.clickOnActionBarItem(R.id.settings);
 
 			String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 			solo.waitForText(preferenceTitle);

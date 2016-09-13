@@ -460,13 +460,13 @@ public class FormulaEditorDataFragmentListTest extends BaseActivityInstrumentati
 		}
 
 		assertFalse("MenuItem should not be found!", ids.contains(R.id.formula_editor_data_item_delete));
-		assertFalse("MenuItem should not be found!", ids.contains(R.id.copy));
+		/*assertFalse("MenuItem should not be found!", ids.contains(R.id.copy));
 		assertFalse("MenuItem should not be found!", ids.contains(R.id.cut));
 		assertFalse("MenuItem should not be found!", ids.contains(R.id.insert_below));
-		assertFalse("MenuItem should not be found!", ids.contains(R.id.move));
+		assertFalse("MenuItem should not be found!", ids.contains(R.id.move));*/
 		assertFalse("MenuItem should not be found!", ids.contains(R.id.rename));
 		assertFalse("MenuItem should not be found!", ids.contains(R.id.show_details));
-		assertFalse("MenuItem should not be found!", ids.contains(R.id.settings));
+		//assertFalse("MenuItem should not be found!", ids.contains(R.id.settings));
 	}
 
 	public void testEmptyUserListCreation() {

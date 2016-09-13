@@ -124,7 +124,7 @@ public class BrickCategoryFragment extends ListFragment {
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		menu.findItem(R.id.delete).setVisible(false);
-		menu.findItem(R.id.copy).setVisible(false);
+		//menu.findItem(R.id.copy).setVisible(false);
 		menu.findItem(R.id.backpack).setVisible(false);
 		if (scriptFragment != null) {
 			((ScriptFragment) scriptFragment).setBackpackMenuIsVisible(false);

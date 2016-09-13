@@ -180,7 +180,7 @@ public class BackPackSpriteFragment extends BackPackActivityFragment implements 
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.copy).setVisible(false);
+		//menu.findItem(R.id.copy).setVisible(false);
 
 		if (!BackPackListManager.getInstance().getBackPackedSprites().isEmpty()) {
 			menu.findItem(R.id.unpacking_object).setVisible(true);

@@ -388,7 +388,7 @@ public class ProjectActivityTest extends BaseActivityInstrumentationTestCase<Mai
 	public void testCopySelectAll() {
 		UiTestUtils.getIntoSpritesFromMainMenu(solo);
 		int currentNumberOfSprites = getCurrentNumberOfSprites() - 1;
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 		String deselectAll = solo.getString(R.string.deselect_all).toUpperCase(Locale.getDefault());
 		UiTestUtils.clickOnText(solo, selectAll);
@@ -1138,9 +1138,9 @@ public class ProjectActivityTest extends BaseActivityInstrumentationTestCase<Mai
 		assertFalse("Sprite is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
 				R.id.delete, delete, FIRST_TEST_SPRITE_NAME));
 		solo.goBack();
-		String copy = solo.getString(R.string.copy);
+		/*String copy = solo.getString(R.string.copy);
 		assertFalse("Sprite is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
-				R.id.copy, copy, FIRST_TEST_SPRITE_NAME));
+				R.id.copy, copy, FIRST_TEST_SPRITE_NAME));*/
 	}
 
 	public void testRenameActionModeChecking() {

@@ -196,7 +196,7 @@ public class SpritesListFragmentTest extends BaseActivityInstrumentationTestCase
 		String deselectAll = solo.getString(R.string.deselect_all).toUpperCase(Locale.getDefault());
 		solo.sleep(TIME_TO_WAIT);
 
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		assertTrue("Select All is not shown", UiTestUtils.waitForShownState(solo, solo.getView(R.id.select_all), true));
 
 		UiTestUtils.clickOnText(solo, selectAll);
@@ -319,7 +319,7 @@ public class SpritesListFragmentTest extends BaseActivityInstrumentationTestCase
 				.nothing_to_delete)));
 		solo.clickOnButton(0);
 		solo.waitForDialogToClose();
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 		solo.waitForDialogToOpen();
 		assertTrue("Nothing to backpack dialog not shown", solo.waitForText(solo.getString(R.string
 				.nothing_to_copy)));

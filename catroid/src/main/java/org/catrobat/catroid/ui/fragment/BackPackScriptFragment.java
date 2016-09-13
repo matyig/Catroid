@@ -121,7 +121,7 @@ public class BackPackScriptFragment extends BackPackActivityFragment implements 
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.copy).setVisible(false);
+		//menu.findItem(R.id.copy).setVisible(false);
 		if (!BackPackListManager.getInstance().getBackPackedScripts().isEmpty()) {
 			menu.findItem(R.id.unpacking).setVisible(true);
 		}

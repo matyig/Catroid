@@ -175,9 +175,9 @@ public class NfcTagFragment extends ScriptActivityFragment implements NfcTagBase
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.copy).setVisible(true);
+		//menu.findItem(R.id.copy).setVisible(true);
 		menu.findItem(R.id.backpack).setVisible(false);
-		menu.findItem(R.id.cut).setVisible(false);
+		//menu.findItem(R.id.cut).setVisible(false);
 		menu.findItem(R.id.show_details).setVisible(true);
 
 		super.onPrepareOptionsMenu(menu);

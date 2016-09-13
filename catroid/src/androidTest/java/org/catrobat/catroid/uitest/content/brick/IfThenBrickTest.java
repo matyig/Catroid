@@ -75,7 +75,7 @@ public class IfThenBrickTest extends BaseActivityInstrumentationTestCase<MainMen
 	}
 
 	public void testCopyIfLogicBeginBrick() {
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		solo.clickOnCheckBox(1);
 		UiTestUtils.acceptAndCloseActionMode(solo);
 
@@ -90,7 +90,7 @@ public class IfThenBrickTest extends BaseActivityInstrumentationTestCase<MainMen
 	}
 
 	public void testCopyIfLogicEndBrick() {
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		solo.clickOnCheckBox(3);
 		UiTestUtils.acceptAndCloseActionMode(solo);
 

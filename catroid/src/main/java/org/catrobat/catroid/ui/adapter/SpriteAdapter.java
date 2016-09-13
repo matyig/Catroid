@@ -93,7 +93,7 @@ public class SpriteAdapter extends SpriteBaseAdapter implements ActionModeActivi
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		View spriteView = convertView;
-		final ViewHolder holder;
+		/*final ViewHolder holder;
 		if (convertView == null) {
 			spriteView = inflater.inflate(R.layout.activity_project_spritelist_item, parent, false);
 			holder = new ViewHolder();
@@ -231,7 +231,7 @@ public class SpriteAdapter extends SpriteBaseAdapter implements ActionModeActivi
 				return false;
 			}
 		});
-
+		*/
 		return spriteView;
 	}
 

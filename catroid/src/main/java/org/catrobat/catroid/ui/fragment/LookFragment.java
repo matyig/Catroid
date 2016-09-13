@@ -341,16 +341,16 @@ public class LookFragment extends ScriptActivityFragment implements LookBaseAdap
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.copy).setVisible(true);
+		//menu.findItem(R.id.copy).setVisible(true);
 		menu.findItem(R.id.unpacking).setVisible(false);
 		menu.findItem(R.id.backpack).setVisible(true);
 		if (BackPackListManager.getInstance().getAllBackPackedLooks().isEmpty()) {
 			StorageHandler.getInstance().clearBackPackLookDirectory();
 		}
-		menu.findItem(R.id.cut).setVisible(true);
+		//menu.findItem(R.id.cut).setVisible(true);
 		menu.findItem(R.id.rename).setVisible(true);
 		menu.findItem(R.id.show_details).setVisible(true);
-		menu.findItem(R.id.settings).setVisible(true);
+		//menu.findItem(R.id.settings).setVisible(true);
 
 		super.onPrepareOptionsMenu(menu);
 	}

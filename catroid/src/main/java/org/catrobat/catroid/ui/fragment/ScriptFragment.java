@@ -267,7 +267,7 @@ public class ScriptFragment extends ScriptActivityFragment implements OnCategory
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		menu.findItem(R.id.delete).setVisible(true);
-		menu.findItem(R.id.copy).setVisible(true);
+		//menu.findItem(R.id.copy).setVisible(true);
 		super.onCreateOptionsMenu(menu, inflater);
 	}
 

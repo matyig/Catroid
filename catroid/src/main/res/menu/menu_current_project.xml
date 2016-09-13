@@ -23,24 +23,24 @@
   -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
+    <!--item
         android:id="@+id/backpack"
         android:showAsAction="never"
         android:visible="false"
-        android:title="@string/backpack" />
+        android:title="@string/backpack" /-->
     <item
         android:id="@+id/delete"
         android:showAsAction="never"
         android:title="@string/delete"/>
-    <item
+    <!--item
         android:id="@+id/copy"
         android:showAsAction="never"
-        android:title="@string/copy"/>
+        android:title="@string/copy"/-->
     <item
         android:id="@+id/rename"
         android:showAsAction="never"
         android:title="@string/rename"/>
-    <item
+    <!--item
         android:id="@+id/show_details"
         android:showAsAction="never"
         android:title="@string/show_details"/>
@@ -58,7 +58,7 @@
         android:id="@+id/move"
         android:showAsAction="never"
         android:title="@string/move"
-        android:visible="false"/>
+        android:visible="false"/-->
     <item
         android:id="@+id/upload"
         android:showAsAction="never"

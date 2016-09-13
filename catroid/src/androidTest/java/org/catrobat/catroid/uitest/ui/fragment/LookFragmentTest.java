@@ -731,7 +731,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 
 		int oldCount = adapter.getCount();
 
-		clickSingleItemActionMode(testLookName, R.id.copy, copy);
+		//clickSingleItemActionMode(testLookName, R.id.copy, copy);
 		solo.sleep(300);
 
 		int newCount = adapter.getCount();
@@ -1303,7 +1303,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		String newLookName;
 		String copyAdditionString = solo.getString(R.string.copy_addition);
 
-		clickSingleItemActionMode(FIRST_TEST_LOOK_NAME, R.id.copy, copy);
+		//clickSingleItemActionMode(FIRST_TEST_LOOK_NAME, R.id.copy, copy);
 
 		renameLook(FIRST_TEST_LOOK_NAME, defaultLookName);
 		solo.sleep(200);
@@ -1326,7 +1326,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		solo.sleep(200);
 
 		solo.scrollToTop();
-		clickSingleItemActionMode(newLookName, R.id.copy, copy);
+		//clickSingleItemActionMode(newLookName, R.id.copy, copy);
 
 		copiedLookName = newLookName + "_" + copyAdditionString;
 		renameLook(copiedLookName, defaultLookName);
@@ -1444,7 +1444,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		assertTrue("Resolution prefix not visible after ActionMode", solo.searchText(lookResoltionPrefixText, true));
 
 		// Test on copy ActionMode
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1681,7 +1681,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 	}
 
 	public void testDeleteAndCopyActionMode() {
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1694,7 +1694,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		assertFalse("ActionMode didn't disappear", solo.waitForText(copy, 0, TIME_TO_WAIT));
 
 		solo.sleep(300);
-		clickSingleItemActionMode(FIRST_TEST_LOOK_NAME, R.id.copy, copy);
+		//clickSingleItemActionMode(FIRST_TEST_LOOK_NAME, R.id.copy, copy);
 		solo.sleep(300);
 
 		lookDataList = projectManager.getCurrentSprite().getLookDataList();
@@ -1751,12 +1751,12 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		assertFalse("Look is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
 				R.id.delete, delete, FIRST_TEST_LOOK_NAME));
 		solo.goBack();
-		assertFalse("Look is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
-				R.id.copy, copy, FIRST_TEST_LOOK_NAME));
+		/*assertFalse("Look is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
+				R.id.copy, copy, FIRST_TEST_LOOK_NAME));*/
 	}
 
 	public void testCopyActionModeCheckingAndTitle() {
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1804,7 +1804,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 	public void testCopyActionModeIfNothingSelected() {
 		int expectedNumberOfLooks = lookDataList.size();
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1819,7 +1819,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 	public void testCopyActionModeIfSomethingSelectedAndPressingBack() {
 		int expectedNumberOfLooks = lookDataList.size();
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1841,7 +1841,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		String copiedLookAddition = "_" + solo.getString(R.string.copy_addition);
 		solo.sleep(500);
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 
 		assertTrue("Bottom bar is visible", solo.getView(R.id.bottom_bar).getVisibility() == View.GONE);
 
@@ -1868,7 +1868,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 
 	public void testCopySelectAll() {
 		int currentNumberOfLooks = lookDataList.size();
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		solo.waitForActivity("ScriptActivity");
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 		UiTestUtils.clickOnText(solo, selectAll);
@@ -1931,7 +1931,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 	public void testSelectAllActionModeButton() {
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		solo.waitForActivity("ScriptActivity");
 		assertTrue("Select All is not shown", solo.getView(R.id.select_all).isShown());
 
@@ -1987,7 +1987,7 @@ public class LookFragmentTest extends BaseActivityInstrumentationTestCase<MainMe
 		solo.clickOnButton(0);
 		solo.waitForDialogToClose();
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 		solo.waitForDialogToOpen();
 		assertTrue("Nothing to backpack dialog not shown", solo.waitForText(solo.getString(R.string
 				.nothing_to_copy)));

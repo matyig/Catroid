@@ -50,7 +50,7 @@ public class MyProjectsActivity extends BaseActivity {
 		setContentView(R.layout.activity_my_projects);
 		setUpActionBar();
 
-		BottomBar.hidePlayButton(this);
+		BottomBar.hideBottomBar(this);
 
 		projectsListFragment = (ProjectsListFragment) getFragmentManager().findFragmentById(
 				R.id.fragment_projects_list);
@@ -83,9 +83,9 @@ public class MyProjectsActivity extends BaseActivity {
 				onBackPressed();
 				return true;
 
-			case R.id.copy:
+			/*case R.id.copy:
 				projectsListFragment.startCopyActionMode();
-				break;
+				break;*/
 
 			case R.id.delete:
 				projectsListFragment.startDeleteActionMode();

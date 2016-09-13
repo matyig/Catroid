@@ -195,7 +195,7 @@ public class BackPackSoundFragment extends BackPackActivityFragment implements S
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.copy).setVisible(false);
+		//menu.findItem(R.id.copy).setVisible(false);
 		if (!BackPackListManager.getInstance().getBackPackedSounds().isEmpty()) {
 			menu.findItem(R.id.unpacking).setVisible(true);
 		}

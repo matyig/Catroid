@@ -23,10 +23,10 @@
   -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
+    <!--item
         android:id="@+id/settings"
         android:showAsAction="never"
-        android:title="@string/settings" />
+        android:title="@string/settings" /-->
     <item
         android:id="@+id/menu_logout"
         android:showAsAction="never"

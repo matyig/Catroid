@@ -203,7 +203,7 @@ public class AddBrickFragment extends ListFragment implements DeleteModeListener
 		if (selectedCategory != null && selectedCategory.equals(getActivity().getString(R.string.category_user_bricks))) {
 			menu.findItem(R.id.delete).setVisible(true);
 		}
-		menu.findItem(R.id.copy).setVisible(false);
+		//menu.findItem(R.id.copy).setVisible(false);
 		super.onCreateOptionsMenu(menu, inflater);
 	}
 

@@ -922,7 +922,7 @@ public class MyProjectsActivityTest extends BaseActivityInstrumentationTestCase<
 	public void testLongClickCancelDeleteAndCopy() {
 
 		String delete = solo.getString(R.string.delete);
-		String copy = solo.getString(R.string.copy);
+		//String copy = solo.getString(R.string.copy);
 
 		createProjects();
 		solo.waitForActivity("MainMenuActivity");
@@ -933,8 +933,8 @@ public class MyProjectsActivityTest extends BaseActivityInstrumentationTestCase<
 		assertFalse("Project is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
 				R.id.delete, delete, UiTestUtils.PROJECTNAME1));
 		solo.goBack();
-		assertFalse("Project is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
-				R.id.copy, copy, UiTestUtils.PROJECTNAME1));
+		/*assertFalse("Project is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
+				R.id.copy, copy, UiTestUtils.PROJECTNAME1));*/
 	}
 
 	public void testRenameProject() {
@@ -1590,7 +1590,7 @@ public class MyProjectsActivityTest extends BaseActivityInstrumentationTestCase<
 		assertTrue("Did not copy the selected project", solo.searchText(UiTestUtils.COPIED_PROJECT_NAME, true));
 	}
 
-	public void testCopyProjectViaActionBar() {
+	/*public void testCopyProjectViaActionBar() {
 		String copy = solo.getString(R.string.copy);
 		createProjects();
 		solo.waitForActivity(MainMenuActivity.class.getSimpleName());
@@ -1618,7 +1618,7 @@ public class MyProjectsActivityTest extends BaseActivityInstrumentationTestCase<
 		solo.sendKey(Solo.ENTER);
 		solo.sleep(200);
 		assertTrue("Did not copy the selected project", solo.searchText(UiTestUtils.COPIED_PROJECT_NAME, true));
-	}
+	}*/
 
 	public void testCopyProjectMixedCase() {
 		createProjects();
@@ -1885,7 +1885,7 @@ public class MyProjectsActivityTest extends BaseActivityInstrumentationTestCase<
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 		String deselectAll = solo.getString(R.string.deselect_all).toUpperCase(Locale.getDefault());
 
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		assertFalse("Select All is shown", solo.searchText(selectAll));
 
 		solo.goBack();

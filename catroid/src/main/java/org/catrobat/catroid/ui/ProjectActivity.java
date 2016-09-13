@@ -85,6 +85,8 @@ public class ProjectActivity extends BaseActivity {
 
 		setContentView(R.layout.activity_project);
 
+		BottomBar.hideAddButton(this);
+
 		if (getIntent() != null && getIntent().hasExtra(Constants.PROJECT_OPENED_FROM_PROJECTS_LIST)) {
 			setReturnToProjectsList(true);
 		}
@@ -143,9 +145,9 @@ public class ProjectActivity extends BaseActivity {
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		if (spritesListFragment != null && !spritesListFragment.isLoading) {
+		/*if (spritesListFragment != null && !spritesListFragment.isLoading) {
 			handleShowDetails(spritesListFragment.getShowDetails(), menu.findItem(R.id.show_details));
-		}
+		}*/
 		return super.onPrepareOptionsMenu(menu);
 	}
 
@@ -153,7 +155,7 @@ public class ProjectActivity extends BaseActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		if (spritesListFragment != null) {
 			getMenuInflater().inflate(R.menu.menu_current_project, menu);
-			menu.findItem(R.id.backpack).setVisible(true);
+			//menu.findItem(R.id.backpack).setVisible(true);
 		}
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -173,7 +175,7 @@ public class ProjectActivity extends BaseActivity {
 				showBackPackChooser();
 				break;
 
-			case R.id.copy:
+			/*case R.id.copy:
 				spritesListFragment.startCopyActionMode();
 				break;
 
@@ -184,7 +186,7 @@ public class ProjectActivity extends BaseActivity {
 				break;
 
 			case R.id.move:
-				break;
+				break;*/
 
 			case R.id.rename:
 				spritesListFragment.startRenameActionMode();

@@ -93,7 +93,7 @@ public abstract class BaseActivity extends Activity {
 					return false;
 				}
 				break;
-			case R.id.settings:
+			/*case R.id.settings:
 				Intent settingsIntent = new Intent(this, SettingsActivity.class);
 				startActivity(settingsIntent);
 				break;
@@ -107,7 +107,7 @@ public abstract class BaseActivity extends Activity {
 			case R.id.menu_about:
 				AboutDialogFragment aboutDialog = new AboutDialogFragment();
 				aboutDialog.show(getFragmentManager(), AboutDialogFragment.DIALOG_FRAGMENT_TAG);
-				return true;
+				return true;*/
 			case R.id.menu_logout:
 				Utils.logoutUser(this);
 				return true;

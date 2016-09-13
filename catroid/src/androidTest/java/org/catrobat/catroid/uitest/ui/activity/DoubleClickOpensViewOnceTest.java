@@ -244,14 +244,14 @@ public class DoubleClickOpensViewOnceTest extends TestSuite {
 			}, R.id.main_menu_button_continue, R.id.fragment_container);
 		}
 
-		public void testMainMenuButtonNew() {
+		/*public void testMainMenuButtonNew() {
 			checkDoubleClickOpensViewOnceFragment(new OnClickCommand() {
 				@Override
 				public void execute() {
 					activity.handleNewButton(null);
 				}
 			}, R.id.main_menu_button_new, NewProjectDialog.DIALOG_FRAGMENT_TAG, true);
-		}
+		}*/
 
 		public void testMainMenuButtonMyProjects() {
 			checkDoubleClickOpensViewOnce(new OnClickCommand() {

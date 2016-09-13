@@ -260,7 +260,7 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 
 		int oldCount = adapter.getCount();
 
-		clickSingleItemActionMode(FIRST_TEST_SOUND_NAME, R.id.copy, solo.getString(R.string.copy));
+		//clickSingleItemActionMode(FIRST_TEST_SOUND_NAME, R.id.copy, solo.getString(R.string.copy));
 
 		solo.waitForDialogToClose(1000);
 
@@ -275,7 +275,7 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 
 		int numberOfSoundsBeforeCopy = getCurrentNumberOfSounds();
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 		solo.clickOnCheckBox(0);
 
 		solo.clickOnText(SECOND_TEST_SOUND_NAME);
@@ -291,7 +291,7 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 
 	public void testCopySelectAll() {
 		int numberOfSoundsBeforeCopy = getCurrentNumberOfSounds();
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 		solo.clickOnText(selectAll);
 		solo.sleep(TIME_TO_WAIT);
@@ -1403,9 +1403,9 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 		assertFalse("Sound is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
 				R.id.delete, delete, FIRST_TEST_SOUND_NAME));
 		solo.goBack();
-		String copy = solo.getString(R.string.copy);
+		/*String copy = solo.getString(R.string.copy);
 		assertFalse("Sound is selected!", UiTestUtils.getContextMenuAndGoBackToCheckIfSelected(solo, getActivity(),
-				R.id.copy, copy, FIRST_TEST_SOUND_NAME));
+				R.id.copy, copy, FIRST_TEST_SOUND_NAME));*/
 	}
 
 	public void testAddSoundAndDeleteActionMode() {
@@ -1536,7 +1536,7 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 	public void testSelectAllActionModeButton() {
 		String selectAll = solo.getString(R.string.select_all).toUpperCase(Locale.getDefault());
 
-		UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, solo.getString(R.string.copy), R.id.copy, getActivity());
 		assertTrue("Select All is not shown", solo.getView(R.id.select_all).isShown());
 
 		UiTestUtils.clickOnText(solo, selectAll);
@@ -1591,7 +1591,7 @@ public class SoundFragmentTest extends BaseActivityInstrumentationTestCase<MainM
 		solo.clickOnButton(0);
 		solo.waitForDialogToClose();
 
-		UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
+		//UiTestUtils.openActionMode(solo, copy, R.id.copy, getActivity());
 		solo.waitForDialogToOpen();
 		assertTrue("Nothing to backpack dialog not shown", solo.waitForText(solo.getString(R.string
 				.nothing_to_copy)));

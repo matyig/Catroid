@@ -60,7 +60,7 @@ public class LegoNXTPreferencesTests extends BaseActivityInstrumentationTestCase
 		boolean nxtBricksEnabledStart = SettingsActivity.isMindstormsNXTSharedPreferenceEnabled(applicationContext);
 
 		if (!nxtBricksEnabledStart) {
-			solo.clickOnActionBarItem(R.id.settings);
+			//solo.clickOnActionBarItem(R.id.settings);
 
 			String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 			solo.waitForText(preferenceTitle);
@@ -111,7 +111,7 @@ public class LegoNXTPreferencesTests extends BaseActivityInstrumentationTestCase
 
 		boolean nxtBricksEnabledStart = SettingsActivity.isMindstormsNXTSharedPreferenceEnabled(applicationContext);
 
-		solo.clickOnActionBarItem(R.id.settings);
+		//solo.clickOnActionBarItem(R.id.settings);
 
 		String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 		solo.waitForText(preferenceTitle);
@@ -170,7 +170,7 @@ public class LegoNXTPreferencesTests extends BaseActivityInstrumentationTestCase
 		assertTrue("Sensor 4 is of wrong instance, SensorFactory may has an error",
 				nxt.getSensor4() instanceof NXTI2CUltraSonicSensor);
 
-		solo.clickOnActionBarItem(R.id.settings);
+		//solo.clickOnActionBarItem(R.id.settings);
 		solo.waitForText(preferenceTitle);
 		solo.clickOnText(preferenceTitle);
 		solo.waitForText(solo.getString(R.string.preference_title_mindstorms_nxt_sensors));
@@ -228,7 +228,7 @@ public class LegoNXTPreferencesTests extends BaseActivityInstrumentationTestCase
 		boolean nxtBricksEnabledStart = SettingsActivity.isMindstormsNXTSharedPreferenceEnabled(applicationContext);
 		SettingsActivity.setLegoMindstormsNXTSensorChooserEnabled(applicationContext, true);
 
-		solo.clickOnActionBarItem(R.id.settings);
+		//solo.clickOnActionBarItem(R.id.settings);
 
 		String preferenceTitle = solo.getString(R.string.preference_title_enable_mindstorms_nxt_bricks);
 		solo.waitForText(preferenceTitle);
